@@ -9,7 +9,7 @@ fn main() {
         println!("2. Вычитание (-)");
         println!("3. Умножение (*)");
         println!("4. Деление (/)");
-        println!("5. Выход");
+        println!("5. Выход (или любую цифру)");
 
         let mut choice = String::new();
         io::stdin().read_line(&mut choice).expect("Ошибка чтения строки");
@@ -19,7 +19,7 @@ fn main() {
             Err(_) => continue,
         };
 
-        if choice == 5 {
+        if choice >= 5 {
             println!("До свидания!");
             break;
         }
